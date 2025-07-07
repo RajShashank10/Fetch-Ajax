@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch Data & Render to DOM</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .card {
+      background: #f4f4f4;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Data Rendered from fetch() to DOM</h2>
+  <div id="container"></div>
+
+  <script>
+    // Step 1: Create fake JSON data
+    const data = [
+      { name: "Alice", email: "alice@example.com" },
+      { name: "Bob", email: "bob@example.com" },
+      { name: "Charlie", email: "charlie@example.com" }
+    ];
+    // Step 2: Convert data to a Blob (a file-like object in memory)
+    const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+
+    // Step 3: Create a temporary object URL from the Blob
+    const url = URL.createObjectURL(blob);
+
+    // Step 4: Fetch from the generated URL and render into DOM
+    fetch(url)
+      .then(res => res.json())
+      .then(users => {
+        const container = document.getElementById("container");
+        for (let i = 0; i < users.length; i++) {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `<strong>Name:</strong> ${users[i].name}<br>
+                            <strong>Email:</strong> ${users[i].email}`;
+          container.appendChild(card);
+        }
+      })
+      .catch(err => {
+        console.error("Fetch failed:", err);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch API Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fetch API Example</h1>
+    <button id="fetchBtn">Fetch Users</button>
+    <div class="container" id="output"></div>
+    <script src="render.js"></script>
+    <script>
+        document.getElementById('fetchBtn').onclick = function() {
+            const output = document.getElementById('output');
+            output.innerHTML = 'Loading...';
+            fetch('http://localhost:3001/users')
+                .then(response => response.json())
+                .then(data => renderUsers(data, output))
+                .catch(() => output.innerHTML = 'Error fetching data.');
+        };
+    </script>
+</body>
+</html>

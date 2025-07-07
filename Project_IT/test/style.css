@@ -1,0 +1,16 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 2rem; 
+}
+.container { 
+    margin-top: 2rem; 
+}
+.user { 
+    border: 1px solid #ccc; 
+    padding: 1rem; 
+    margin-bottom: 1rem; 
+    border-radius: 5px; 
+}
+button { 
+    margin-right: 1rem; 
+}

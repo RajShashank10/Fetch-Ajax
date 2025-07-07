@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin: 20px;
+        }
+        .card{
+            border: 1px solid #aaa;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Data Rendered in DOM</h2>
+    <div class="data-container"></div>
+
+
+
+    <script>
+        const mockApiData = [
+            {name: 'Raj', email: 'raj@a1.com'},
+            {name: 'Yash', email: 'yash@a2.com'},
+            {name: 'Tom', email: 'tom@a3.com'}
+        ];
+
+        function fakeFetch(callback){
+            setTimeout(() => {
+                callback(mockApiData);
+            }, 1000);
+        }
+
+        const container = document.getElementById("data-container");
+
+        fakeFetch(function(data){
+            for(let i = 0; i < data.length; i++){
+                const user = data[i];
+
+                const div = document.createElement("div");
+                div.className = "card";
+                div.innerHTML = `<strong>Name:</strong> ${user.name}<br>
+                                 <strong>Email:</strong> ${user.email}`;
+
+                container.appendChild(div);
+            }
+        });
+    </script>
+</body>
+</html>

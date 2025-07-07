@@ -1,0 +1,112 @@
+{
+    "users": [
+        {
+            "name": "Raj",
+            "id": 1,
+            "State": "Mumbai",
+            "Pincode": 89201,
+            "age": 18,
+            "email": "Sincere@april.biz",
+            "address": {
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "city": "Gwenborough",
+                "zipcode": "92998-3874",
+                "Board": {
+                    "10th": "CBSE",
+                    "12th": "CBSE"
+                }
+            }
+        },
+        {
+            "name": "Sam",
+            "id": 2,
+            "State": "Gujarat",
+            "Pincode": 67210,
+            "age": 20,
+            "email": "sam@342.biz",
+            "address": {
+                "street": "Gb Road",
+                "suite": "Apt. 531",
+                "city": "Kurla",
+                "zipcode": "91194-5474",
+                "Board": {
+                    "10th": "CBSE",
+                    "12th": "ICSE"
+                }
+            }
+        },
+        {
+            "name": "Tom",
+            "id": 3,
+            "State": "Delhi",
+            "Pincode": 73411,
+            "age": 22,
+            "email": "tom@950.biz",
+            "address": {
+                "street": "Main Tower",
+                "suite": "Apt. 334",
+                "city": "Silk Board",
+                "zipcode": "95624-5112",
+                "Board": {
+                    "10th": "ICSE",
+                    "12th": "ICSE"
+                }
+            }
+        },
+        {
+            "name": "James",
+            "id": 4,
+            "State": "UP",
+            "Pincode": 737761,
+            "age": 21,
+            "email": "james@4422.biz",
+            "address": {
+                "street": "Near Station",
+                "suite": "Apt. 901",
+                "city": "Madiwala",
+                "zipcode": "91004-9021",
+                "Board": {
+                    "10th": "State",
+                    "12th": "CBSE"
+                }
+            }
+        },
+        {
+            "name": "Roar",
+            "id": 5,
+            "State": "Karnataka",
+            "Pincode": 68901,
+            "age": 23,
+            "email": "roar@1010.biz",
+            "address": {
+                "street": "KSRTC Road",
+                "suite": "Apt. 102",
+                "city": "Electronic City",
+                "zipcode": "10409-9804",
+                "Board": {
+                    "10th": "State",
+                    "12th": "State"
+                }
+            }
+        },
+        {
+            "name": "Bob",
+            "id": 6,
+            "State": "J&K",
+            "Pincode": 799981,
+            "age": 25,
+            "email": "bob@4102.biz",
+            "address": {
+                "street": "Ganni market",
+                "suite": "Apt. 101",
+                "city": "Hoodi",
+                "zipcode": "78544-9711",
+                "Board": {
+                    "10th": "ICSE",
+                    "12th": "CBSE"
+                }
+            }
+        }
+    ]
+}
